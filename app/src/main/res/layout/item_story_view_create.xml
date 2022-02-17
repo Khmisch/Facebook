@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="160dp"
+        android:layout_marginRight="10dp">
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:layout_marginRight="10dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:strokeColor="#E8E8E8"
+                app:strokeWidth="1dp"
+                android:src="@drawable/im_sample_007"
+                android:tint="#30000000"
+                app:shapeAppearanceOverlay="@style/rounded_corner"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/shape_border_rounded"
+            android:layout_gravity="bottom"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="13dp">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_create"
+                        app:shapeAppearanceOverlay="@style/circle"
+                        app:strokeColor="@color/white"
+                        app:strokeWidth="2dp" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_fullname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Create story"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>
