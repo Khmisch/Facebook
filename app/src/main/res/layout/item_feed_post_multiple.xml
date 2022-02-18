@@ -67,16 +67,91 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/iv_photo"
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:src="@drawable/im_post_1"/>
+            android:orientation="horizontal">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_photo"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginRight="1.5dp"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:src="@drawable/im_post_1"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_photo_2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="1.5dp"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:src="@drawable/im_post_1"/>
 
 
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_photo_3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_marginRight="1.5dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/im_post_1"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_photo_4"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginRight="1.5dp"
+                android:layout_marginLeft="1.5dp"
+                android:scaleType="centerCrop"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:src="@drawable/im_post_1"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="1.5dp"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/iv_photo_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:tint="#30000000"
+                        android:src="@drawable/im_post_1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5+"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:layout_gravity="center"/>
+                </FrameLayout>
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout

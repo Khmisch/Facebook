@@ -54,11 +54,13 @@ class MainActivity : AppCompatActivity() {
         //Post
 
         feed.add(Feed(Post(R.drawable.im_sample_007, "Khurshidbek Kurbanov", R.drawable.im_post_4)))
-        feed.add(Feed(Post(R.drawable.my_profile, "Rachel ", R.drawable.im_post_3)))
+        feed.add(Feed(Post(R.drawable.my_profile, "Rachel ", R.drawable.im_post_3,R.drawable.im_user_3,R.drawable.im_post_1,R.drawable.im_post_4,R.drawable.im_sample_007, false, true)))
         feed.add(Feed(Post(R.drawable.im_person_00, "Richard Feynman", R.drawable.im_user_3)))
         feed.add(Feed(Post(R.drawable.im_sample_007, "Khurshidbek Kurbanov", R.drawable.im_post_1)))
         feed.add(Feed(Post(R.drawable.my_profile, "Rachel", R.drawable.im_stories_holiday)))
         feed.add(Feed(Post(R.drawable.im_sample_007, "Khurshidbek Kurbanov", R.drawable.im_sample_007, true)))
+        feed.add(Feed(Post(R.drawable.im_person_00, "Richard Feynman", R.drawable.im_user_3)))
+        feed.add(Feed(Post(R.drawable.my_profile, "Rachel", R.drawable.im_stories_holiday)))
 
 
 
