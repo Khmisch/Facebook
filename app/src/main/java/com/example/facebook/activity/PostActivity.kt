@@ -35,6 +35,7 @@ class PostActivity : AppCompatActivity() {
     private lateinit var la_loading: LottieAnimationView
     private var isFindLink = false
     lateinit var link:Link
+    lateinit var value:String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,7 +51,7 @@ class PostActivity : AppCompatActivity() {
         iv_exit = findViewById(R.id.iv_exit)
         tv_link_domain = findViewById(R.id.tv_link_domain)
         bt_post = findViewById(R.id.bt_post)
-        la_loading = findViewById(R.id.la_loading)
+//        la_loading = findViewById(R.id.la_loading)
         tv_title = findViewById(R.id.tv_title)
         editText = findViewById(R.id.et_link)
 
@@ -74,6 +75,7 @@ class PostActivity : AppCompatActivity() {
                 if (containsLink(s.toString())) {
                     ll_preview.visibility = View.VISIBLE
                     iv_delete.visibility = View.VISIBLE
+
                 }
                 else{
                     ll_preview.visibility = View.GONE
@@ -85,10 +87,9 @@ class PostActivity : AppCompatActivity() {
                 else bt_post.setBackgroundResource(R.drawable.view_border_rounded_post)
             }
 
-            override fun afterTextChanged(s: Editable) {
-
-            }
+            override fun afterTextChanged(s: Editable) {}
         })
+
     }
 
     private fun getElementsJsoup(url: String) {
@@ -104,7 +105,7 @@ class PostActivity : AppCompatActivity() {
                             link.img = element.attr("content")
                             Picasso.get().load(element.attr("content")).into(iv_post)
                         }
-                        element.attr("property").equals("og:description") -> {
+                        element.attr("property").equals("og:url") -> {
                             link.domain = element.attr("content")
                             tv_link_domain.text = element.attr("content")
                         }
@@ -114,7 +115,7 @@ class PostActivity : AppCompatActivity() {
                         }
                     }
                 }
-                la_loading.visibility = View.GONE
+                value = editText.text.toString().trim()
             }
     }
 
@@ -131,6 +132,9 @@ class PostActivity : AppCompatActivity() {
     }
 
     fun backToFinish(link: Link) {
+        link.fullname = "Richard Feynman"
+        link.profile = R.drawable.im_person_00
+        link.link = value
         val intent = Intent()
         intent.putExtra("link",link)
         setResult(RESULT_OK, intent)

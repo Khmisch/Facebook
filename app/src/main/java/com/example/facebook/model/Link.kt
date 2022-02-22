@@ -9,6 +9,9 @@ import java.io.Serializable
      var img:String? = null
      var title:String? = null
      var domain:String? = null
+     var link:String? = null
+     var fullname:String? = null
+     var profile:Int = 0
 
 
      override fun toString(): String {

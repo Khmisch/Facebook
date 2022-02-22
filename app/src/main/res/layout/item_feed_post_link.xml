@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:text="https://kurbanovxurshid.medium.com/android-java-kotlin-course-plan-68d8d97f75e5"
             android:textColor="#0C47AC"
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:padding="10dp"/>
 
         <LinearLayout
@@ -92,14 +92,16 @@
                     android:id="@+id/iv_link"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/im_post_1"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_info"
+                    android:layout_gravity="right"
                     android:layout_marginTop="15dp"
-                    android:layout_marginRight="10dp"
-                    android:drawableRight="@android:drawable/ic_dialog_info"/>
+                    android:padding="8dp"
+                    android:background="@drawable/view_border_corner_white"
+                    android:layout_marginRight="15dp"/>
             </FrameLayout>
         </LinearLayout>
 
@@ -108,7 +110,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#EFEEEE"
+            android:background="#F5F7F8"
             android:padding="10dp">
 
             <TextView
@@ -134,23 +136,23 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:gravity="center_vertical">
-        
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:paddingLeft="16dp">
-            
+
             <FrameLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-                
+
                 <LinearLayout
                     android:layout_width="36dp"
                     android:layout_height="wrap_content"
                     android:gravity="right">
-                    
+
                     <ImageView
                         android:layout_width="19dp"
                         android:layout_height="19dp"
@@ -175,6 +177,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="16dp"
                 android:text="675"
+                android:textColor="#434343"
                 android:textSize="14sp"/>
         </LinearLayout>
 
@@ -182,7 +185,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="16dp"
-            android:text="154 Comments 11 Shares"
+            android:text="2 Comments 11 Shares"
+            android:textColor="#434343"
             android:textSize="14sp"/>
 
     </LinearLayout>
@@ -205,7 +209,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginRight="5dp"
-                android:src="@drawable/ic_like" />
+                android:src="@drawable/ic_liked" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

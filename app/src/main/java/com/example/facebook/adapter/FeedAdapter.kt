@@ -129,10 +129,13 @@ class FeedAdapter (var context: MainActivity, var items:ArrayList<Feed>) : Recyc
 
         if (holder is PostViewHolderLink){
             holder.tv_title.text = feed.link!!.title
+            holder.tv_fullname.text = feed.link!!.fullname
+            holder.tv_link.text = feed.link!!.link
+            holder.iv_profile.setImageResource(feed.link!!.profile)
             holder.tv_domain.text = feed.link!!.domain
-            Glide.with(context).load(feed!!.link!!.img)
-                .placeholder(R.drawable.ic_launcher_background)
-                .error(R.drawable.ic_launcher_background)
+            Glide.with(context).load(feed.link!!.img)
+                .placeholder(R.color.white_2)
+                .error(R.color.white_2)
                 .into(holder.iv_link);
         }
 
@@ -147,6 +150,9 @@ class FeedAdapter (var context: MainActivity, var items:ArrayList<Feed>) : Recyc
         var iv_link: ShapeableImageView = view.findViewById(R.id.iv_link)
         var tv_title : TextView = view.findViewById(R.id.tv_title)
         var tv_domain : TextView = view.findViewById(R.id.tv_domain)
+        var tv_link : TextView = view.findViewById(R.id.tv_link)
+        var tv_fullname : TextView = view.findViewById(R.id.tv_fullname)
+        var iv_profile : ShapeableImageView = view.findViewById(R.id.iv_profile)
 
     }
 

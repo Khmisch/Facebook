@@ -142,6 +142,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="16dp"
                 android:text="675"
+                android:textColor="#434343"
                 android:textSize="14sp"/>
         </LinearLayout>
 
@@ -150,6 +151,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="16dp"
             android:text="1 Comments"
+            android:textColor="#454343"
             android:textSize="14sp"/>
 
     </LinearLayout>
