@@ -4,9 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/User/AndroidStudioProjects/Facebook/app/src/main/res/drawable/shape_border_rounded.xml" value="0.1205" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Facebook/app/src/main/res/drawable/view_border_corner.xml" value="0.1205" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Facebook/app/src/main/res/drawable/view_border_rounded.xml" value="0.1205" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Facebook/app/src/main/res/drawable/view_border_rounded_corner.xml" value="0.1205" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Facebook/app/src/main/res/drawable/view_border_rounded_post.xml" value="0.1205" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Facebook/app/src/main/res/drawable/view_border_rounded_post_default.xml" value="0.1205" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Facebook/app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Facebook/app/src/main/res/layout/activity_post.xml" value="0.2" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Facebook/app/src/main/res/layout/item_feed_head.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Facebook/app/src/main/res/layout/item_feed_post.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Facebook/app/src/main/res/layout/item_feed_post_link.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Facebook/app/src/main/res/layout/item_feed_post_multiple.xml" value="0.22" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Facebook/app/src/main/res/layout/item_feed_post_profile.xml" value="0.22" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Facebook/app/src/main/res/layout/item_feed_story.xml" value="0.20416666666666666" />
