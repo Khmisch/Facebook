@@ -32,7 +32,6 @@ class PostActivity : AppCompatActivity() {
     lateinit var iv_exit:ImageView
     lateinit var ll_preview:LinearLayout
     lateinit var bt_post:Button
-    private lateinit var la_loading: LottieAnimationView
     private var isFindLink = false
     lateinit var link:Link
     lateinit var value:String
@@ -51,7 +50,6 @@ class PostActivity : AppCompatActivity() {
         iv_exit = findViewById(R.id.iv_exit)
         tv_link_domain = findViewById(R.id.tv_link_domain)
         bt_post = findViewById(R.id.bt_post)
-//        la_loading = findViewById(R.id.la_loading)
         tv_title = findViewById(R.id.tv_title)
         editText = findViewById(R.id.et_link)
 
@@ -105,7 +103,7 @@ class PostActivity : AppCompatActivity() {
                             link.img = element.attr("content")
                             Picasso.get().load(element.attr("content")).into(iv_post)
                         }
-                        element.attr("property").equals("og:url") -> {
+                        element.attr("property").equals("og:domain") -> {
                             link.domain = element.attr("content")
                             tv_link_domain.text = element.attr("content")
                         }
@@ -122,7 +120,7 @@ class PostActivity : AppCompatActivity() {
     private fun containsLink(input: String): Boolean {
         val parts = input.split(" ")
         for (item in parts) {
-            if (Patterns.WEB_URL.matcher(item).matches()) {
+            if (!isFindLink && Patterns.WEB_URL.matcher(item).matches()) {
                 getElementsJsoup(item)
                 isFindLink = true
                 return true
