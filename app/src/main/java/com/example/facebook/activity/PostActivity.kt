@@ -8,18 +8,15 @@ import android.util.Patterns
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.airbnb.lottie.LottieAnimationView
 import com.example.facebook.R
 import com.example.facebook.helper.Utils
-import com.example.facebook.model.Feed
 import com.example.facebook.model.Link
-import com.example.facebook.model.Post
 import com.squareup.picasso.Picasso
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.schedulers.Schedulers
-import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
-import java.io.IOException
+import java.net.URI
+import java.net.URL
 
 
 class PostActivity : AppCompatActivity() {
@@ -103,9 +100,10 @@ class PostActivity : AppCompatActivity() {
                             link.img = element.attr("content")
                             Picasso.get().load(element.attr("content")).into(iv_post)
                         }
-                        element.attr("property").equals("og:domain") -> {
-                            link.domain = element.attr("content")
-                            tv_link_domain.text = element.attr("content")
+                        element.attr("property").equals("og:description") -> {
+                            val uri = URL(url)
+                            link.domain = uri.host
+                            tv_link_domain.text = uri.host
                         }
                         element.attr("property").equals("og:title") -> {
                             link.title = element.attr("content")
